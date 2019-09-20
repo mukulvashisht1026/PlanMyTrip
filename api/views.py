@@ -25,7 +25,7 @@ def index(request,):
 
 				row[4] = 0.0
 			# print(type(int(float(row[4]))))
-			print(row[4])
+			# print(row[4])
 
 
 			if(float(row[4])<= float(Budget)):
