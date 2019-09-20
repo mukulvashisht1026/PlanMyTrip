@@ -16,8 +16,24 @@ def index(request,):
 		context = {
 		'list_of_places': [] 
 		}
+		count =0
 		for row in data:
-			if(row[4]<=Budget):
-				context['list_of_places'].append(row) 
+			if(count == 0):
+				count =1
+				continue
+			if(row[4]==''):
+
+				row[4] = 0.0
+			# print(type(int(float(row[4]))))
+			print(row[4])
+
+
+			if(float(row[4])<= float(Budget)):
+				context['list_of_places'].append({
+					"nameOfPlace" : row[1],
+					"linkOfImage" : row[2],
+					"description" : row[3],
+					"budget"	  : row[4]
+					}) 
 
 	return HttpResponse(json.dumps(context),content_type="application/json")
