@@ -1,0 +1,75 @@
+{% load static %}	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Plan My Trip</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'search/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'search/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'search/css/aos.css'%}">
+
+    <link rel="stylesheet" href="{% static 'search/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'search/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/jquery.timepicker.css' %}">
+
+    
+    <link rel="stylesheet" href="{% static 'search/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'search/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+
+
+  </head>
+  <body>
+
+<!-- <div>
+	{% if user.is_authenticated %}
+<div>
+	<a href="/accounts/logout/">
+		<div class=" d-flex justify-content-end">
+      		<div class="form-group">
+      			<div class="form-field">
+	           		<button type="submit" class="form-control btn btn-primary">Logout</button>
+	        	</div>
+	    	</div>
+    	</div>
+    </a>
+</div>
+	{% endif %}
+</div>
+ -->
+
+
+
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid px-md-4	">
+	      <a class="navbar-brand" href="/">PlanMyTrip</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item cta cta-colored"><a href="/accounts/logout/" class="nav-link">Logout</a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+    {% block content %}
+    {% endblock %}
